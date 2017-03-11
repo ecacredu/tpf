@@ -120,8 +120,11 @@ gulp.task('scripts', () =>
         './app/styles/src/ripple/ripple.js',
         './app/styles/src/textfield/textfield.js',
         './app/styles/src/layout/layout.js',
+        './app/styles/src/tooltip/tooltip.js',
         // Other scripts,
-        './app/scripts/main.js'
+        './app/scripts/modernizr.js',
+        './app/scripts/main.js',
+        './app/scripts/story.js'
     ])
     .pipe($.newer('.tmp/scripts'))
     .pipe($.sourcemaps.init())

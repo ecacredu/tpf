@@ -3,4 +3,5 @@ dist/
 .tmp
 .firebaserc
 firebase.json
+database.rules.json
 app.yaml
