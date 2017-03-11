@@ -116,6 +116,8 @@ gulp.task('styles', () => {
 gulp.task('scripts', () =>
     gulp.src([
         // Component handler
+        './app/scripts/jquery.min.js',
+        './app/scripts/jquery.mobile.custom.min.js',
         './app/styles/src/mdlComponentHandler.js',
         './app/styles/src/ripple/ripple.js',
         './app/styles/src/textfield/textfield.js',
