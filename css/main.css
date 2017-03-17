@@ -1,0 +1,143 @@
+body,
+html {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    color: #000
+}
+.right {
+    text-align: right;
+    padding: 2em
+}
+.right .promoTitle {
+    font-weight: 300;
+    text-align: right;
+    font-size: 4rem
+}
+.right .promoMessage {
+    text-align: justify;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2em
+}
+.right a {
+    color: #222;
+    font-size: 1.2em
+}
+.right form {
+    text-align: center
+}
+.right form .mdl-button,
+.right form .mdl-textfield {
+    display: inline-block;
+    vertical-align: top
+}
+.right form .mdl-textfield .mdl-textfield__input {
+    padding: 6px 0
+}
+.right form .mdl-textfield .mdl-textfield__label {
+    font-size: 18px
+}
+.right form .mdl-textfield .mdl-textfield__label:after {
+    background-color: #222
+}
+.right form .mdl-button {
+    margin-top: 20px;
+    margin-left: 1em
+}
+.right form h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 3.5em
+}
+.left .socialIcons {
+    width: 100%;
+    text-align: center;
+    margin-top: 5em
+}
+.left .socialIcons h4 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 0
+}
+.left .socialIcons i {
+    margin: .3em;
+    margin-top: 0;
+    cursor: pointer;
+    color: #aaa
+}
+.left .socialIcons i:hover {
+    color: #000
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 28px;
+    padding-left: 1em
+}
+.footer a {
+    font-size: 6px;
+    outline:none;
+}
+.footer a:hover,.footer a:active{
+    outline:none;
+}
+.footer a:hover i {
+    color:#000;
+}
+.footer a:nth-child(n+2) {
+    color: #aaa;
+    margin: auto 3px
+}
+#ballWrapper {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 8%
+}
+.promoCover {
+    width: 100%
+}
+
+.jssocials-shares {
+    margin: 0.2em 0;
+    text-align: center;
+}
+
+.jssocials-share-link {
+    border: none !important;
+}
+
+.jssocials-share-link:hover, .jssocials-share-link:focus, .jssocials-share-link:active{
+    color: black;
+    border:none;
+}
+
+.jssocials-share-logo {
+    /* width: 1em; */
+    vertical-align: middle;
+    font-size: 3em;
+}
+
+.customprogress{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 2em;
+}
+
+#p2{
+    display : none;
+}
+
+.mdl-progress.mdl-progress__indeterminate>.bar1{
+        background-color: rgb(2,2,2);
+}
+
+.mdl-progress>.bufferbar {
+    background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,rgb(2,2,2),rgb(2,2,2));
+}
+
+.mdl-progress:not(.mdl-progress--indeterminate):not(.mdl-progress--indeterminate)>.auxbar{
+    background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,rgb(2,2,2),rgb(2,2,2));
+}
