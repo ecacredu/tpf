@@ -1,0 +1,304 @@
+.container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    z-index: 2;
+    margin-top: -12px;
+    left: 1.5rem
+}
+.pushable>.pusher{
+    z-index: 1;
+}
+body.pushable{
+    background-color: transparent !important;
+}
+.bar1, .bar2, .bar3 {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 2px) ;
+    transform: rotate(-45deg) translate(-3px, 2px);
+    background-color: transparent !important;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px) ;
+    transform: rotate(45deg) translate(-6px, -6px);
+    background-color: transparent !important;
+}
+
+
+.ui.vertical.menu .item>.header:not(.ui){
+    margin: 0.8em 1em .6em;
+    font-size: 1.1em;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: white !important;
+}
+
+.headerTitle{
+    position: fixed;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+}
+.headerTitle>p{
+    font-size: 1.4em;
+    color: #000000;
+}
+.shareIcons{
+    position: fixed;
+    bottom: 3%;
+    right: 4%;
+    z-index: 23;
+}
+.shareButtonDiv{
+    margin: 0 0;
+    display: none;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.menu.custom p{
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 100;
+    }
+.circularButton{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    /*border: 1px solid;*/
+    outline: none;
+    -webkit-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.89);
+    -moz-box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.89);
+    box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.89);
+}
+.like{
+    width: 30px;
+    height: 31px;
+    border: 1px solid white;
+    color: white;
+    margin: 0 1em 0 0;
+    font-size: 1em !important;
+    display: inline-block;
+}
+.like i{
+        vertical-align: middle;
+        padding-top: 5px;
+}
+.showButtons{
+    display: block;
+}
+.opacityControler{
+    transition: 0.4s;
+    opacity: 1;
+    margin: 1.2em 0;
+}
+.LikeButtons{
+    width: 100%;
+    text-align: center;
+    padding-left: 6%;
+    margin: 0 0 3em;
+}
+.Title{
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    background-color: black;
+    height: 3.8em;
+}
+.titleText{
+    width: 85%;
+    background-color: transparent;
+}
+.Title>.titleText>h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.center-fix{
+			  position: absolute;
+			  top: 50%;
+              left: 50%;
+			  transform: translate(-50%, -50%);
+			  text-align: center;
+			}
+.appName{
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 1em;
+}
+.appName>h1{
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.content{
+    padding: 5.5rem 1.5rem 5rem;
+}
+.imgDiv{
+    width: 100%;
+    text-align: center;
+}
+.imgDiv>img{
+    width: 65%;
+}
+.shortDescription{
+    text-align: justify;
+    margin-top: 1.5em;
+    
+}
+.shortDescription>h1{
+        font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.Start{
+    width: 100%;
+    text-align: right;
+    text-decoration: underline;
+    margin-top: 2em;
+}
+.Start>a{
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+.emailInput{
+        margin-top: 1.5em;
+}
+.emailInput>input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.49);
+    width: 100%;
+    font-size: 1.4em;
+    outline: none;
+}
+.emailInput>button{
+    width: 100%;
+    height: 2.8rem;
+    border: 0;
+    font-size: 1.2em;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 5px -4px rgba(0,0,0,0.75);
+}
+.content>.pageHeading{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2.7rem;
+    margin: 1rem 0 1.5rem;
+}
+.content>.para{
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+    text-align: justify;
+}
+.previousNext{
+    margin-top: 2rem;
+}
+.navButtons{
+    display: inline-block;
+    width: 50%;
+}
+.next{
+    text-align: right;
+    width: 49%;
+}
+.navButtons>a{
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;;
+}
+
+#sharePop{
+    float:right !important;
+    padding: .2em !important;
+    margin-top: .40em !important;
+    font-size: 1.75rem !important;
+}
+
+#sharePop,#sharePop:hover{
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.subscriptionMessage,.lastPageReleaseMessage,.sidebarReleaseMessage{
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.subscriptionMessage{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;    
+}
+
+.lastPageReleaseMessage{
+    margin-top:40px;
+    font-size: 1.4em;
+}
+
+.sidebarReleaseMessage{
+    color:white;
+    margin-top: 80px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.ui.popup{
+    left: auto !important;
+    /*right: 20px !important;*/
+    right: 9px !important;
+    padding: 12px 1.1em 0 1em;
+}
+
+.ui.popup.visible{
+    left: auto !important;
+    right: 9px !important;
+}
+
+.jssocials-share{
+    font-size: 2.2em;
+    margin-bottom: 0.4em;
+}
+.jssocials-share-link { border-radius: 50%; }
+.ui.centered.inline.loader.active,.ui.message{
+    display: none;
+}
+.jssocials-share-twitter a{
+    color: #55acee;
+}
+.jssocials-share-facebook a{
+    color: #3b5998;
+}
+.jssocials-share-whatsapp a{
+    color: #34AF23;
+}
+
+.subscribe{
+    margin-bottom: 30px;
+}
