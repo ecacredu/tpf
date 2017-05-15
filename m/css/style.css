@@ -152,6 +152,9 @@ body.pushable{
 .content{
     padding: 5.5rem 1.5rem 5rem;
 }
+
+
+
 .imgDiv{
     width: 100%;
     text-align: center;
@@ -301,4 +304,8 @@ body.pushable{
 
 .subscribe{
     margin-bottom: 30px;
+}
+
+.content > h4{
+    display: inline-block !important;
 }

@@ -1,0 +1,100 @@
+body, html {
+    font-family: Roboto;
+    color: #000;
+}
+
+.jquery-modal.blocker{
+    z-index: 225 !important;
+}
+
+.jquery-modal .modal{
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.ui.input{
+    width: 100%;
+}
+
+.actions{
+    background: #f9fafb;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgba(34,36,38,.15);
+    text-align: right;
+}
+
+.reviewDiv{
+    position: absolute;
+    left: 0;
+    top: 45%;
+
+}
+
+.queryDiv{
+    position: absolute;
+    left: 0;
+    top: 52%;
+}
+
+/*.reviewDiv:hover,.queryDiv:hover{
+    -webkit-transform: scale(1.5) translateX(14%);
+            transform: scale(1.5) translateX(14%);
+}*/
+
+.reviewDiv button,.queryDiv button{
+    outline: none;
+    padding: .5em;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    background: transparent;
+    color: #222;
+    font-size: 1.2em;
+}
+
+.shareDiv h4,.shareDiv #share{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.shareDiv h4{
+    margin-right: 2em;
+}
+
+.loginDiv{
+    text-align: center;
+    padding: 3em;
+}
+
+.loginDiv button{
+    display: inline-block;
+    color: #fff;
+    background: #000;
+    padding: .7em;
+    outline: none;
+    border: none;
+}
+
+.loginDiv .googleLogButton{
+    background: #db3236;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+.loginDiv .fbLogButton{
+    background: #3b5998;
+}
+
+#share{
+    margin-top: 1em;
+    text-align: right;
+}
+
+#reviewText,#queryText{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+}

@@ -52,6 +52,8 @@
             
         });
 
+        
+
         configurePopUp();
 
         function configurePopUp(){
@@ -97,7 +99,158 @@
                 //console.log('dimmed');
             });
 
-           
+            $(document).on("click", "#querySubmit", function (event) {
+            event.preventDefault();
+             var user = firebase.auth().currentUser;
+            var query = $('#queryText').val();
+
+            if(query == null || query == ''){
+                return;
+            }
+
+            var newPostKey = firebase.database().ref().child('queries/').push().key;
+            var obj = {
+                query: query,
+                date: new Date().toString(),
+                user: user.uid,
+                ref:window.location.href+''
+            }
+
+            firebase.database().ref('queries/'+newPostKey).set(obj).then(function (response){
+                firebase.database().ref('users/'+user.uid+'/queries/'+newPostKey).set(obj).then(function (response){
+                    
+                });
+            })
+        });
+
+        $(document).on("click", "#reviewSubmit", function (event) {
+            event.preventDefault();
+             var user = firebase.auth().currentUser;
+            var review = $('#reviewText').val();
+
+            if(review == null || review == ''){
+                return;
+            }
+
+            var newPostKey = firebase.database().ref().child('reviews/').push().key;
+            var obj = {
+                review: review,
+                date: new Date().toString(),
+                user: user.uid,
+                ref:   window.location.href+''
+            }
+                location.url
+            firebase.database().ref('reviews/'+newPostKey).set(obj).then(function (response){
+                firebase.database().ref('users/'+user.uid+'/reviews/'+newPostKey).set(obj).then(function (response){
+                    
+                });
+            })
+        });
+
+            $("#postReview").click(function() {
+                   
+                    var user = firebase.auth().currentUser;
+                    console.log(user);
+                     if(user){
+                             $('.review.ui.modal').modal({
+                                closable:false
+                            }).modal('show');
+                     }else{
+                        $('.login.ui.modal').modal({
+                            closable:false
+                        }).modal('show');
+                     }
+
+                });
+
+                $("#postQuery").click(function() {
+                    var user = firebase.auth().currentUser;
+                    console.log(user);
+                     if(user){
+                        $('.query.ui.modal').modal({
+                            closable:false
+                        }).modal('show');
+                     }else{
+                        $('.login.ui.modal').modal({
+                            closable:false
+                        }).modal('show');
+                     }
+                });
+
+                $(document).on("click", "#submitLogin", function (event) {
+                    event.preventDefault();
+                    var email = $('#txt_username').val();
+                    var password = $('#txt_password').val();
+                    firebase.auth().signInWithEmailAndPassword(email, password).then(function(val) {
+                        console.log(val);
+                        $('.review.ui.modal').modal({
+                                closable:false
+                            }).modal('show');
+                    }).catch(function(error) {
+                    // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        // ...
+                        console.log(errorMessage);
+                    });
+                });
+
+                $(document).on("click", "#emailLogId", function (event) {
+                    event.preventDefault();
+                    $('.loginMail.ui.modal').modal({
+                            closable:false
+                        }).modal('show');
+                });
+
+           $('#googleLogId').click(function(event) {
+                event.preventDefault();
+                var provider = new firebase.auth.GoogleAuthProvider();
+                firebase.auth().signInWithPopup(provider).then(function(result) {
+                    // This gives you a Google Access Token. You can use it to access the Google API.
+                    var token = result.credential.accessToken;
+                    // The signed-in user info.
+                    var user = result.user;
+                    // ...
+                    $('.review.ui.modal').modal({
+                                closable:false
+                            }).modal('show');
+                }).catch(function(error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    // The email of the user's account used.
+                    console.log(errorMessage);
+                    var email = error.email;
+                    // The firebase.auth.AuthCredential type that was used.
+                    var credential = error.credential;
+                    // ...
+                });
+            });
+
+            $('#fbLogId').click(function(event) {
+                event.preventDefault();
+                var provider = new firebase.auth.FacebookAuthProvider();
+                firebase.auth().signInWithPopup(provider).then(function(result) {
+                    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+                    var token = result.credential.accessToken;
+                    // The signed-in user info.
+                    var user = result.user;
+                    // ...
+                    $('.review.ui.modal').modal({
+                                closable:false
+                            }).modal('show');
+                }).catch(function(error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.log(errorMessage);
+                    // The email of the user's account used.
+                    var email = error.email;
+                    // The firebase.auth.AuthCredential type that was used.
+                    var credential = error.credential;
+                    // ...
+                });
+            });
            
             function showPopup(){
                  $('.example .custom.button').popup({
