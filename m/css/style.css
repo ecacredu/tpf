@@ -3,7 +3,7 @@
     cursor: pointer;
     position: fixed;
     top: 2rem;
-    z-index: 2;
+    z-index: 3;
     margin-top: -12px;
     left: 1.5rem
 }
@@ -120,6 +120,8 @@ body.pushable{
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
     background-color: black;
     height: 3.8em;
+    z-index: 2;
+
 }
 .titleText{
     width: 85%;
