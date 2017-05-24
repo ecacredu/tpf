@@ -3,7 +3,7 @@
     cursor: pointer;
     position: fixed;
     top: 2rem;
-    z-index: 3;
+    z-index: 6;
     margin-top: -12px;
     left: 1.5rem
 }
